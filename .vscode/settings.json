@@ -9,13 +9,16 @@
   "python.linting.flake8.enabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.mypyArgs": ["--strict"],
-  "mypy-type-checker.args": ["--strict"],
+  // "mypy-type-checker.args": ["--strict"],
   "python.linting.pylintArgs": [
     "--load-plugins=pylint_django",
     "--errors-only"
   ],
   "pylint.args": [
-    "--load-plugins=pylint_django",
+    "--load-plugins",
+    "pylint_django",
+    "--django-settings-module",
+    "projeto.settings",
     "--errors-only"
   ],
   "python.formatting.autopep8Args": ["--indent-size=4"],
